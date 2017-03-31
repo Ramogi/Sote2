@@ -8,6 +8,7 @@
 		function outputText() {
 			var userInput = document.getElementById("firstName").value;
 			//document.getElementById("userInput").innerHTML=userInput;
+			// allows multiple entries
 			var textNode = document.createElement("p");
 			var textNodeContent = document.createTextNode(userInput);
 			textNode.appendChild(textNodeContent);

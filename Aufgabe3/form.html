@@ -7,17 +7,22 @@
 <script type="text/javascript">
 		function outputText() {
 			var userInput = document.getElementById("firstName").value;
-			document.getElementById("userInput").innerHTML=userInput;
+			//document.getElementById("userInput").innerHTML=userInput;
+			var textNode = document.createElement("p");
+			var textNodeContent = document.createTextNode(userInput);
+			textNode.appendChild(textNodeContent);
+			document.getElementById("userInput").appendChild(textNode);
+
 
 		}
 	</script>
 <body>
 	<h2>Please enter your name</h2>
-	<form action="">
+	
 		Name: <input id="firstName" type="text" name="name" />
 		<input type="button"  onclick="outputText()" value="Submit";>
-		<h3 id="userInput"> </h3>
-	</form>
+		<p id="userInput"> </p>
+	
 
 
 	
